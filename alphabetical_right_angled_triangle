@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+        for (int k = 1; k <= t; k++) {
+            int n = sc.nextInt();
+
+            for (int i = n; i >= 1; i--) {
+                for (char ch = 'A'; ch < 'A' + i; ch++) {
+                    System.out.print(ch);
+                }
+                System.out.println();
+            }
+        }
+
+        sc.close();
+    }
+}
