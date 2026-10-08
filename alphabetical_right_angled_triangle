@@ -4,8 +4,10 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Enter the Number of time you wanna execute program!!");
         int t = sc.nextInt();
         for (int k = 1; k <= t; k++) {
+            System.out.println("Enter the number of alphabet you want in pattern:");
             int n = sc.nextInt();
 
             for (int i = n; i >= 1; i--) {
