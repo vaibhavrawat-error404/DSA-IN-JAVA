@@ -24,7 +24,7 @@ class main {
         //String sentence="My name is Vaibhav Rawat";
         String sentence;
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the sentence : ");
+        System.out.print("Enter the sentence : ");
         sentence=input.nextLine();
 
         char []vowelsINstring=new char[sentence.length()];
@@ -39,6 +39,7 @@ class main {
                 }
             }
         }
+        System.out.print("Vowels Found in Entered sentence : ");
         for(int j=0;j<no_Of_vowels;j++){
             System.out.print(vowelsINstring[j]+" ");
         }
