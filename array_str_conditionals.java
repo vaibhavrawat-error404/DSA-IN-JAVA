@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class main {
+class array_str_conditionals {
     public static void main(String[] args) {
         int count = 0;
         char []vowels={'a','e','i','o','u','A','E','I','O','U'};
@@ -44,6 +44,7 @@ class main {
             System.out.print(vowelsINstring[j]+" ");
         }
         System.out.println("\nNumber of vowels in given sentence is :"+no_Of_vowels);
+        System.out.println("End Of Program!!");
         input.close();
     }
 }

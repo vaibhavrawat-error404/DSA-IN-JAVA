@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class main {
+public class math_and_constant {
     public static void main(String[] args) {
         //final float PI = 3.14F;
 
