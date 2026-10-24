@@ -103,19 +103,64 @@ public class patterns {
             System.out.println();
         }
     }
+    //7.Hoolow Right angled triangled
+    public static void pattern7(){
+        int row;
+        int column;
+        char ch;
+        System.out.print("Enter the size of pattern (1-10): ");
+        row = sc.nextInt();
+        System.out.print("Enter the character: ");
+        ch = sc.next().charAt(0);
+        for (int i = 1; i <= row; i++) {
+            for(int j=1;j<=i;j++){
+                if(j == 1 || j == i || i == row){
+                    System.out.print(ch);
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    //8.Rhombus patter
+    public static void pattern8(){
+        int row;
+        int column;
+        char ch;
+
+        System.out.print("Enter the size of pattern (1-10): ");
+        row = sc.nextInt();
+        System.out.print("Enter the character: ");
+        ch = sc.next().charAt(0);
+        for (int i = 1; i <= row; i++) {
+                for(int j=row-i;j>=1;j--){
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=row;j++){
+                    System.out.print(ch);
+                }
+            System.out.println();
+            }
+        }
+    //9.
 
 
     public static void main(String[] args) {
-        //pattern1();
-        //pattern2();
-        //pattern3();
-        //pattern4();
-        //pattern5();
+//        pattern1();
+//        pattern2();
+//        pattern3();
+//        pattern4();
+//        pattern5();
+//        pattern6();
+//        pattern7();
+//        pattern8();
         int rep;
         System.out.print("Enter the number of times to repeat the pattern: ");
         rep=sc.nextInt();
         for(int i=1;i<=rep;i++){
-            pattern6();
+            pattern9();
         }
 
     }
