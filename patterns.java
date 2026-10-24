@@ -251,7 +251,7 @@ public class patterns {
         }
     }
     //14.Inverted Solid Pyramid Pattern
-    public static void pattern14(){
+    public static void pattern14() throws InterruptedException{
         int row;
         int col;
         char ch;
@@ -267,11 +267,38 @@ public class patterns {
             for(int j=1;j<=2*n-2*row+1;j++){
                 System.out.print(ch+" ");
             }
+            Thread.sleep(1000);
             System.out.println();
         }
     }
+    //15.Hollow Rectangle
+    public static void pattern15() throws InterruptedException{
+        int row;
+        int col;
 
-    public static void main(String[] args) {
+        int n;
+        System.out.println("Enter the size of pattern (1-10):");
+        System.out.print("Enter the row :");
+        int b = sc.nextInt();
+        System.out.print("Enter the column :");
+        int l = sc.nextInt();
+
+        for ( row = 1; row <= b; row++) {
+            for(col = 1; col <= l; col++) {
+                if(row == 1 || row ==b || col ==1 || col ==l){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            Thread.sleep(1000);
+            System.out.println();
+        }
+
+    }
+
+    public static void main(String[] args) throws InterruptedException {
 //        pattern1();
 //        pattern2();
 //        pattern3();
@@ -285,11 +312,15 @@ public class patterns {
 //        pattern12();
 //        pattern13();
 //        pattern14();
+//        pattern15();
+//        pattern16();
+//        pattern17();
+//        pattern18();
         int rep;
         System.out.print("Enter the number of times to repeat the pattern: ");
         rep=sc.nextInt();
         for(int i=1;i<=rep;i++){
-            pattern14();
+            pattern15();
         }
 
     }
