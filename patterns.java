@@ -135,7 +135,7 @@ public class patterns {
         System.out.print("Enter the character: ");
         ch = sc.next().charAt(0);
         for (int i = 1; i <= row; i++) {
-                for(int j=row-i;j>=1;j--){
+                for(int j=1;j<=row-i;j++){
                     System.out.print(" ");
                 }
                 for(int j=1;j<=row;j++){
@@ -144,8 +144,132 @@ public class patterns {
             System.out.println();
             }
         }
-    //9.
+    //9.Alphabet Triangle Pattern
+    public static void pattern9(){
+        int row;
+        char col;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
 
+        for ( row = 1; row <= n; row++) {
+            for(col = 'A'; col < 'A' + row; col++){
+                System.out.print(col+" ");
+            }
+            System.out.println();
+        }
+    }
+    //10.Inverted Alphabet Triangle Pattern
+    public static void pattern10(){
+        int row;
+        char col;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+
+        for ( row = 1; row <= n; row++) {
+            for(col = 'A'; col <= 'A' + n - row; col++){
+                System.out.print(col+" ");
+            }
+            System.out.println();
+        }
+
+    }
+    //11.Pyramid Pattern
+    public static void pattern11(){
+        int row;
+        int col;
+        char ch;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        System.out.print("Enter the character: ");
+        ch = sc.next().charAt(0);
+        for ( row = 1; row <= n; row++) {
+            for(int j=1;j<=n-row+1;j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<2*row;j++){
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+    //12.Hollow Pyramid Pattern
+    public static void pattern12(){
+        int row;
+        int col;
+        char ch;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        System.out.print("Enter the character: ");
+        ch = sc.next().charAt(0);
+        for ( row = 1; row <= n; row++) {
+            for(int j=1;j<=n-row+1;j++){
+                System.out.print(" ");
+            }
+            for(int k=1;k<2*row;k++){
+                if(k == 1 || k == 2*row-1 || row == n){
+                    System.out.print(ch);
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    //13.Symmetric Number Pyramid Pattern
+    public static void pattern13(){
+        int row;
+        int col;
+        char ch;
+        int n;
+
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        //System.out.print("Enter the character: ");
+        //ch = sc.next().charAt(0);
+        for ( row = 1; row <= n; row++) {
+            int count = 1;
+            for(int j=1;j<=n-row+1;j++){
+                System.out.print("  ");
+            }
+            for(int k=1;k<=row;k++){
+                {
+                    System.out.print(count+" ");
+                    count++;
+                }
+            }
+            count-=2;
+            for(int i=1;i<row;i++){
+                System.out.print(count+" ");
+                count--;
+            }
+            System.out.println();
+        }
+    }
+    //14.Inverted Solid Pyramid Pattern
+    public static void pattern14(){
+        int row;
+        int col;
+        char ch;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        System.out.print("Enter the character: ");
+        ch = sc.next().charAt(0);
+        for ( row = 1; row <= n; row++) {
+            for(int i=1;i<=row-1;i++){
+                System.out.print("  ");
+            }
+            for(int j=1;j<=2*n-2*row+1;j++){
+                System.out.print(ch+" ");
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
 //        pattern1();
@@ -156,11 +280,16 @@ public class patterns {
 //        pattern6();
 //        pattern7();
 //        pattern8();
+//        pattern10()
+//        pattern11();
+//        pattern12();
+//        pattern13();
+//        pattern14();
         int rep;
         System.out.print("Enter the number of times to repeat the pattern: ");
         rep=sc.nextInt();
         for(int i=1;i<=rep;i++){
-            pattern9();
+            pattern14();
         }
 
     }
