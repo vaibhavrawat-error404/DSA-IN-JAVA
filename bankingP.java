@@ -6,7 +6,7 @@ public class bankingP {
 
         int choice;
         boolean isRunning=true;
-        double balance=1.95;
+        double balance=500000;
 
         while(isRunning) {
 
@@ -26,8 +26,8 @@ public class bankingP {
 
             switch (choice) {
                 case 1 -> checkBalance(balance);
-                case 2 -> balance += balance+deposit();
-                case 3 -> System.out.println("Please enter your withdrawal");
+                case 2 -> balance = balance+deposit();
+                case 3 -> balance = balance-withdraw(balance);
                 case 4 -> isRunning = false;
                 default -> System.out.println("Invalid choice");
             }
@@ -49,5 +49,21 @@ public class bankingP {
             return amount;
         }
 
+    }
+    static double withdraw(double balance){
+        System.out.print("Enter amount to withdraw: ");
+        double amount =sc.nextDouble();
+        if(amount < 0){
+            System.out.println("Invalid amount");
+            return 0;
+        }
+        else if(amount >balance){
+            System.out.println("Insufficient Funds could not be withdrawn:");
+            return 0;
+        }
+        else{
+            System.out.println("Successfully withdrawn");
+            return amount;
+        }
     }
 }
