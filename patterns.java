@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-public class patterns {
     static Scanner sc = new Scanner(System.in);
 
     //1. and 2. basic loops
@@ -433,12 +432,51 @@ public class patterns {
             System.out.println();
         }
     }
-    //21.
+    //21.Number Pyramid Pattern
     public static void pattern21() throws InterruptedException{
+        int row;
+        int space;
+        int star;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        for ( row = 1; row <= n; row++) {
+            for(space=1;space<=n-row;space++){
+                System.out.print("  ");
+            }
+            for(star=1;star<2*row;star++){
+                System.out.print(row+" ");
+            }
 
+            System.out.println();
+        }
+    }
+    //22.Symmetric Alphabet Pyramid Pattern
+    public static void pattern22() throws InterruptedException{
+        int row;
+        int space;
+        int col;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        for ( row = 1; row <= n; row++) {
+            for(space=1;space<=n-row;space++){
+                //Thread.sleep(1000);
+                System.out.print("  ");
+            }
+            for(char ch='A';ch<'A'+row;ch++){
+                //Thread.sleep(1000);
+                System.out.print(ch+" ");
+            }
+            for (char ch = (char) ('A' + row - 2); ch >= 'A'; ch--) {
+                //Thread.sleep(1000);
+                System.out.print(ch + " ");
+            }
+            System.out.println();
+        }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    void main()throws InterruptedException {
 //        pattern1();
 //        pattern2();
 //        pattern3();
@@ -459,13 +497,15 @@ public class patterns {
 //        pattern19();
 //        pattern20();
 //        pattern21();
+//        pattern22();
+
 
         int rep;
         System.out.print("Enter the number of times to repeat the pattern: ");
         rep=sc.nextInt();
         for(int i=1;i<=rep;i++){
-            pattern21();
+            pattern22();
         }
 
     }
-}
+
