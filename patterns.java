@@ -297,6 +297,146 @@ public class patterns {
         }
 
     }
+    //16.Solid Diamond pattern
+    public static void pattern16() throws InterruptedException{
+        int row;
+        int col;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        //for pyramid
+        for ( row = 1; row <= n; row++) {
+            for(int space=1;space<=n-row;space++){
+                System.out.print("  ");
+            }
+            for(col=1;col<2*row;col++){
+                System.out.print("* ");
+                Thread.sleep(1000);
+            }
+            System.out.println();
+        }
+        //for inverted pyramid
+        for ( row = 1; row < n; row++) {
+            for(int space=1;space<=row;space++){
+                System.out.print("  ");
+            }
+            for(col=1;col<2*n-2*row;col++){
+                System.out.print("* ");
+                Thread.sleep(1000);
+            }
+            System.out.println();
+        }
+    }
+    //17.Hollow Solid Diamond pattern
+    public static void pattern17() throws InterruptedException{
+        int row;
+        int col;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        //for pyramid
+        for ( row = 1; row <= n; row++) {
+            for(int space=1;space<=n-row;space++){
+                System.out.print("  ");
+            }
+            for(col=1;col<2*row;col++){
+                if(col==1 || col==2*row-1)
+                {
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+                Thread.sleep(500);
+            }
+            System.out.println();
+        }
+        //for inverted pyramid
+        for ( row = 1; row < n; row++) {
+            for(int space=1;space<=row;space++){
+                System.out.print("  ");
+            }
+            for(col=1;col<2*n-2*row;col++){
+                if(col==1 || col==2*n-2*row-1)
+                {
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+                Thread.sleep(500);
+            }
+            System.out.println();
+        }
+    }
+    //18.Butterfly Pattern
+    public static void pattern18() throws InterruptedException{
+        int row;
+        int col;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        for ( row = 1; row <= n; row++) {
+            for(int star=1;star<=row;star++){
+                System.out.print("* ");
+            }
+            for(int space=1;space<=2*n-2*row;space++){
+                System.out.print("  ");
+            }
+            for(int star=1;star<=row;star++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for ( row = 1; row <= n; row++) {
+            for(int star=0;star<=n-row;star++){
+                System.out.print("* ");
+            }
+            for(int space=2;space<2*row;space++){
+                System.out.print("  ");
+            }
+            for(int star=0;star<=n-row;star++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+    //19.Number Triangle Pattern
+    public static void pattern19() throws InterruptedException{
+        int row;
+        int col;
+        int n;
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        for ( row = 1; row <= n; row++) {
+            for(col=1;col<=row;col++){
+                System.out.print(col+" ");
+            }
+            System.out.println();
+        }
+    }
+    //20.Reverse Alphabet Right-Angled Triangle Pattern
+    public static void pattern20() throws InterruptedException{
+        int row;
+        int  col;
+        int n;
+
+        System.out.print("Enter the size of pattern (1-10): ");
+        n = sc.nextInt();
+        for ( row = 1; row <= n; row++) {
+            char ch='E';
+            for(col=1;col<=row;col++){
+                System.out.print(ch+" ");
+                ch--;
+            }
+            System.out.println();
+        }
+    }
+    //21.
+    public static void pattern21() throws InterruptedException{
+
+    }
 
     public static void main(String[] args) throws InterruptedException {
 //        pattern1();
@@ -316,11 +456,15 @@ public class patterns {
 //        pattern16();
 //        pattern17();
 //        pattern18();
+//        pattern19();
+//        pattern20();
+//        pattern21();
+
         int rep;
         System.out.print("Enter the number of times to repeat the pattern: ");
         rep=sc.nextInt();
         for(int i=1;i<=rep;i++){
-            pattern15();
+            pattern21();
         }
 
     }
