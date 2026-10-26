@@ -475,6 +475,10 @@ import java.util.Scanner;
             System.out.println();
         }
     }
+    //23.Pascal Triangle Pattern
+    public static void pattern23() throws InterruptedException{
+
+    }
 
     void main()throws InterruptedException {
 //        pattern1();
@@ -498,13 +502,11 @@ import java.util.Scanner;
 //        pattern20();
 //        pattern21();
 //        pattern22();
-
-
         int rep;
         System.out.print("Enter the number of times to repeat the pattern: ");
         rep=sc.nextInt();
         for(int i=1;i<=rep;i++){
-            pattern22();
+            pattern23();
         }
 
     }
