@@ -59,9 +59,50 @@ public class arrays {
 
     }
 
+    //2D array
+    public static void jaggedArray() {
+        int row;
+        int sum=0;
+
+        System.out.print("Enter the size of row: ");
+        row = sc.nextInt();
+
+        int [][]arr=new int [row][];
+
+        for (int i = 0; i < row; i++) {
+
+            System.out.printf("Enter the number of column in %d row:",i);
+            int col=sc.nextInt();
+            arr[i]=new int [col];
+
+            System.out.println("Enter the elements of the array: ");
+
+            for(int j=0;j<col;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        int max=arr[0][0];
+
+        System.out.println("Array elements are: ");
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                System.out.print("  "+arr[i][j]+"  ");
+                sum+=arr[i][j];
+                if(arr[i][j]>max){
+                    max=arr[i][j];
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("The sum of all elements in array is = "+sum);
+        System.out.println("The maximum element in array is = "+max);
+
+    }
+
     public static void main(String[] args) {
         //basic();
-        traverse();
+        //traverse();
+        //jaggedArray();
 
     }
 }
