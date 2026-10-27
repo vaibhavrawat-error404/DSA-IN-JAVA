@@ -99,10 +99,33 @@ public class arrays {
 
     }
 
+    //linear search in 1D array
+    public static void linearSearch(){
+        int []arr={1,2,3,4,5,6,7,8};
+        int find=4;
+        int attempt=0;
+
+        System.out.println("Elements of Array are: ");
+        for(int i=0;i<arr.length;i++){
+            System.out.print("  "+arr[i]+"  ");
+        }
+        System.out.println();
+
+        for(int i=0;i<arr.length;i++){
+            attempt++;
+            if(arr[i]==find){
+                System.out.printf("%d found at %d index and %d position of array",arr[i],i,i+1);
+            }
+        }
+        System.out.println();
+        System.out.printf("It took %d to find the search element",attempt);
+    }
+
     public static void main(String[] args) {
         //basic();
         //traverse();
         //jaggedArray();
+        //linearSearch();
 
     }
 }
