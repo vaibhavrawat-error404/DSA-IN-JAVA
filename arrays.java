@@ -121,11 +121,39 @@ public class arrays {
         System.out.printf("It took %d to find the search element",attempt);
     }
 
+    //sum of each row
+    public static void sumOfrow(){
+        int [][]arr={{1,2,3,4},
+        {5,6,7,8},};
+
+        for(int j=0;j<arr.length;j++){
+            for(int i=0;i<arr[j].length;i++){
+                System.out.print(arr[j][i]+"  ");
+            }
+            System.out.println();
+        }
+
+
+        for(int i=0;i<arr.length;i++){
+            int sum=0;
+            for(int j=0;j<arr[i].length;j++){
+                sum+=arr[i][j];
+            }
+            System.out.printf("Sum of row %d is : %d",i,sum);
+            System.out.println();
+        }
+
+    }
+
+    //Sum of column
+
+
     public static void main(String[] args) {
         //basic();
         //traverse();
         //jaggedArray();
         //linearSearch();
-
+        //sumOfrow();
+        sumOfcol();
     }
 }
