@@ -146,7 +146,28 @@ public class arrays {
     }
 
     //Sum of column
+    public static void sumOfcol(){
+        int [][]arr={{1,2,3,4},
+                {5,6,7,8},};
 
+        for(int j=0;j<arr.length;j++){
+            for(int i=0;i<arr[j].length;i++){
+                System.out.print(arr[j][i]+"  ");
+            }
+            System.out.println();
+        }
+
+
+        for(int j=0;j<arr[0].length;j++){
+            int sum=0;
+            for(int i=0;i<arr.length;i++){
+                sum+=arr[i][j];
+            }
+            System.out.printf("Sum of column %d is : %d",j,sum);
+            System.out.println();
+        }
+
+    }
 
     public static void main(String[] args) {
         //basic();
