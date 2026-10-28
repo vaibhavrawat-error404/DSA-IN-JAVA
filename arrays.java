@@ -175,6 +175,6 @@ public class arrays {
         //jaggedArray();
         //linearSearch();
         //sumOfrow();
-        sumOfcol();
+        //sumOfcol();
     }
 }
