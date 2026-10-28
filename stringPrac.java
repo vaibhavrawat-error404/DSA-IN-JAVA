@@ -24,6 +24,20 @@ public class stringPrac {
         return count;
     }
 
+    //count vowels in a string
+    public static void countVowels(String str){
+        int count=0;
+        String vowels="aeiouAEIOU";
+        for(int i=0;i<str.length();i++){
+            for(int j=0;j<vowels.length();j++){
+                if(str.charAt(i)==(vowels.charAt(j))){
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+    }
+
     public static void main(){
 
         System.out.print("Enter a string: ");
@@ -33,5 +47,6 @@ public class stringPrac {
         //strAllChar(str);
 //        int count= countLen(str);
 //        System.out.println(count);
+        //countVowels(str);
     }
 }
