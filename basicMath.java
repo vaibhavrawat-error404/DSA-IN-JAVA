@@ -1,5 +1,8 @@
 import java.util.Scanner;
+import java.lang.Math;
+
 import static java.lang.Math.sqrt;
+
 
 public class basicMath {
         static Scanner sc = new Scanner(System.in);
@@ -61,27 +64,20 @@ public class basicMath {
             }
 
         //6.Check if a number is prime or not
-        public static void checkPrime(int num){
-            boolean check=true;
-            if(num<=1){
-                check=false;
-            }
-            else{
-                for(int i=2;i<sqrt(num);i++){
-                    if(num%i==0){
-                        check=false;
-                        break;
+        public static boolean checkPrime(int num) {
+            boolean check = true;
+            if (num <= 1) {
+                return false;
+            } else {
+                for (int i = 2; i*i <= num; i++) {
+                    if (num % i == 0) {
+                        return false;
                     }
                 }
             }
-
-            if(check){
-                System.out.println("Number is a Prime");
-            }
-            else{
-                System.out.println("Number is not a Prime");
-            }
+            return true;
         }
+
 
         //7.find GCD
         public static int getGCD(int a, int b){
@@ -160,6 +156,16 @@ public class basicMath {
             }
         }
 
+        //11.All prime number 1 to n
+        public static void allPrimeNUm(int num){
+            for(int i=1;i<=num;i++) {
+                if (checkPrime(i)) {
+                    System.out.println(i);
+                }
+            }
+                System.out.println();
+        }
+
 
     public static void  main(String[] args){
 
@@ -185,7 +191,9 @@ public class basicMath {
 
 //        isArmstrong(num);
 //        isPerfectNumber1(num);
-        System.out.print(isPerfectNumber2(num));
+//        System.out.print(isPerfectNumber2(num));
+
+        allPrimeNUm(num);
 
         sc.close();
 
