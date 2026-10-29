@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import static java.lang.Math.sqrt;
 
 public class basicMath {
     static Scanner sc = new Scanner(System.in);
@@ -59,31 +60,38 @@ public class basicMath {
 
         //6.Check if a number is prime or not
         public static void checkPrime(int num){
-        int check=0;
-        for(int i=2;i<num;i++){
-            if(num%i==0){
-                check=1;
-                break;
+            boolean check=true;
+            if(num<=1){
+                check=false;
             }
-        }
-        if(check==0){
-            System.out.println("Number is a Prime");
-        }
-        else{
-            System.out.println("Number is not a Prime");
-        }
+            else{
+                for(int i=2;i<sqrt(num);i++){
+                    if(num%i==0){
+                        check=false;
+                        break;
+                    }
+                }
+            }
+
+            if(check){
+                System.out.println("Number is a Prime");
+            }
+            else{
+                System.out.println("Number is not a Prime");
+            }
         }
 
 
     public static void  main(String[] args){
         System.out.print("Enter a number(Any natural number): ");
         int num = sc.nextInt();
-        //digitsOfNum(num);
-        //countOFDigits(num);
-        //sumOFDigits(num);
-        //numReverse(num);
-        //checkPalindrome(num);
-        //checkPrime(num);
+//        digitsOfNum(num);
+//        countOFDigits(num);
+//        sumOFDigits(num);
+//        numReverse(num);
+//        checkPalindrome(num);
+//        checkPrime(num);
+
         sc.close();
     }
 }
