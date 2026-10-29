@@ -3,8 +3,12 @@ import java.util.Scanner;
 public class stringPrac {
     static Scanner sc=new Scanner(System.in);
     //reverse the string
-    public static void stringReverse(String str){
-
+    public static String stringReverse(String str){
+        String rev="";
+        for(int i=str.length()-1;i>=0;i--){
+            rev+=str.charAt(i);
+        }
+        return rev;
     }
     //print each char specifically
     public static void strAllChar(String str){
@@ -38,15 +42,31 @@ public class stringPrac {
         System.out.println(count);
     }
 
+    //check palindrome
+    public static boolean isPalindrome(String str) {
+//        String originalStr = str;
+//        String reverseStr = stringReverse(str);
+//        for (int i = 0; i < originalStr.length(); i++) {
+//            char ch1 = originalStr.charAt(i);
+//            char ch2 = reverseStr.charAt(i);
+//            if (ch1 != ch2) {
+//                return false;
+//            }
+//         }
+//        return true;
+        return str.equalsIgnoreCase(stringReverse(str));
+    }
+
     public static void main(){
 
         System.out.print("Enter a string: ");
         String str=sc.nextLine();
 
-        //stringRev(str);
+        stringReverse(str);
         //strAllChar(str);
-//        int count= countLen(str);
-//        System.out.println(count);
+        //int count= countLen(str);
+        //System.out.println(count);
         //countVowels(str);
+        System.out.println(isPalindrome(str));
     }
 }
