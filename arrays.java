@@ -115,6 +115,7 @@ public class arrays {
             attempt++;
             if(arr[i]==find){
                 System.out.printf("%d found at %d index and %d position of array",arr[i],i,i+1);
+                break;
             }
         }
         System.out.println();
@@ -169,12 +170,42 @@ public class arrays {
 
     }
 
+    //Print array 1D
+    public static void printArray1D(int []arr){
+        for (int i : arr) {
+            System.out.print(i + "  ");
+        }
+    }
+
+    //Print 2D array
+    public static void printArray2D(int [][]arr){
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                System.out.print(arr[i][j]+"  ");
+            }
+            System.out.println();
+        }
+    }
+
+    //REVERSING AN ARRAY
+    public static void reverseArray(int []arr){
+
+    }
+
+
     public static void main(String[] args) {
         //basic();
         //traverse();
         //jaggedArray();
         //linearSearch();
         //sumOfrow();
-        //sumOfcol();
+       //sumOfcol();
+//        int []arr={1,2,3,4,5,6,7,8};
+//        reverseArray(arr);
+//        printArray1D(arr);
+//        int [][]arr2={{1,2,3,4},{5,6,7,8},{9,10,11,12,13,14}};
+//        printArray2D(arr2);
+
+
     }
 }
