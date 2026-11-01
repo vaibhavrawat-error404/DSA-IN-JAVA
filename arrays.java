@@ -197,6 +197,17 @@ public class arrays {
         printArray1D(revArray);
     }
 
+    //palindrome array
+    public static boolean checkPalindrome(int []arr){
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i]!=arr[arr.length-1-i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 
     public static void main(String[] args) {
         //basic();
@@ -205,11 +216,11 @@ public class arrays {
         //linearSearch();
         //sumOfrow();
        //sumOfcol();
-        int []arr={1,2,3,4,5,6,7,8};
-        reverseArray(arr);
+        int []arr={1,2,3,4,3,2,1};
+//        reverseArray(arr);
 //        int [][]arr2={{1,2,3,4},{5,6,7,8},{9,10,11,12,13,14}};
 //        printArray2D(arr2);
-
+        System.out.println(checkPalindrome(arr));
 
     }
 }
