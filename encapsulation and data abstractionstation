@@ -1,0 +1,11 @@
+
+abstract class Vehicle {
+
+    // Abstract method
+    abstract void start();
+
+    // Concrete method
+    void stop() {
+        System.out.println("Vehicle stopped");
+    }
+}
