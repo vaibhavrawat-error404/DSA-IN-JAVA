@@ -5,7 +5,12 @@ class Animal {
     }
 }
 
-
+// Dog inherits Animal
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
 
 public class oops {
     public static void main(String[] args) {
